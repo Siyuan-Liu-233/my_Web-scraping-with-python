@@ -10,8 +10,8 @@ def getTitle(url):
         print(e)
         return None
     try:
-        bsObj = BeautifulSoup(html.read())
-        title = bsObj.body.h1
+        bsObj = BeautifulSoup(html)
+        title = bsObj
     except AttributeError as e:
         return None
     return title
@@ -21,3 +21,4 @@ if title == None:
     print("Title could not be found")
 else:
     print(title)
+#help(BeautifulSoup)
